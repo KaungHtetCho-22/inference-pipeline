@@ -33,4 +33,4 @@ COPY . .
 
 ENV PYTHONPATH=/app
 
-CMD ["python", "monsoon_audio_biodiversity/audio_processor/audio_process.py"]
+CMD ["python", "/audio_process.py"]

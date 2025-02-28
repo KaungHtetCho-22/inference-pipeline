@@ -1,0 +1,13 @@
+services:
+  audio_processor:
+    image: monsoon-audio-biodiversity:prod
+    container_name: audio_processor
+    environment:
+      - AUDIO_DATA_DIR=/app/audio_data
+      - APP_DATA_DIR=/app/app-data
+      - AUDIO_CLASSIFIER_WEIGHTS=/app/weights/ait_bird_local_eca_nfnet_l0/fold_0_model.pt
+    volumes:
+      - ${AUDIO_DATA_DIR}:/app/audio_data
+      - ${PWD}/app-data:/app/app-data
+      - ${PWD}/weights/:/app/weights
+    shm_size: '512m'
