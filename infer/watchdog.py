@@ -6,15 +6,16 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 # Configuration
-BASE_DIR = "../bio-data"
-DB_FILENAME = "database/score-training-data-score-5-debug.db"
+BASE_DIR = "bio-data"
+DB_FILENAME = "app-data/soundscape.db"
 INFER_SCRIPT = "infer.py"
 LOG_FILE = "logs/processing_log.txt"
 
 # Mapping of Raspberry Pi devices to bio class and PI type
 RPi_BIO_CLASSES = {
     "RPiID-0000000090d15aba": 5,
-    "RPiID-00000000a1007a14": 5
+    "RPiID-00000000a1007a14": 5,
+    
 }
 
 RPi_PI_TYPE = {
